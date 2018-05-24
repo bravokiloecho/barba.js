@@ -147,6 +147,8 @@ var Pjax = {
     var _this = this;
     var xhr;
 
+    Dispatcher.trigger('beforeLoad');
+
     xhr = this.Cache.get(url);
 
     if (!xhr) {
